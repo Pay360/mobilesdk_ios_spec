@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class MobilesdkEnvironment, UIViewController, MobilesdkTransactionType, MobilesdkTransactionDetails, MobilesdkCustomerDetails, MobilesdkFinancialDetails, MobilesdkPaymentConfigCompanion, MobilesdkBillingAddress, MobilesdkPaymentConfig, MobilesdkAcceptPaymentMethods, MobilesdkStatus, MobilesdkCardError, MobilesdkKotlinArray<T>, MobilesdkPaymentProcessorInternal, MobilesdkPaymentProcessorCompanion, MobilesdkPaymentResultCallbackCompanion, MobilesdkStatusCompanion, MobilesdkStatusCanceled, MobilesdkStatusErrorCompanion, MobilesdkStatusInitiated, MobilesdkStatusSessionExpired, MobilesdkStatusSuccess, MobilesdkStatusUnknown, MobilesdkBillingAddressCompanion, MobilesdkContinuousAuthorityAgreementCompanion, MobilesdkCustomerDetailsCompanion, MobilesdkKotlinEnumCompanion, MobilesdkKotlinEnum<E>, MobilesdkEnvironmentCompanion, MobilesdkFinancialDetailsCompanion, MobilesdkContinuousAuthorityAgreement, MobilesdkTransactionDetailsCompanion, MobilesdkTransactionTypeCompanion, MobilesdkCustomerDetailsResponseCompanion, MobilesdkAcceptPaymentMethodsCompanion, MobilesdkBillingAddressController, MobilesdkBillingAddressState, MobilesdkComponentFontWeight, MobilesdkCardInputController, MobilesdkCardInputStyleState, MobilesdkCardInputSlimController, MobilesdkCardInputSlimStyleState, MobilesdkLabelLocation, MobilesdkUi_textFontWeight, MobilesdkSaveCardBoxController, MobilesdkSaveCardState, MobilesdkSavedCardsController, MobilesdkSavedCardsState, MobilesdkAuthenticationHelper, MobilesdkKotlinThrowable, MobilesdkKotlinException, MobilesdkKotlinRuntimeException, MobilesdkUi_textFontWeightCompanion, MobilesdkKotlinIllegalStateException, MobilesdkKotlinx_serialization_coreSerializersModule, MobilesdkKotlinx_serialization_coreSerialKind, MobilesdkKotlinNothing;
+@class MobilesdkAcceptPaymentMethods, MobilesdkAcceptPaymentMethodsCompanion, MobilesdkAuthenticationHelper, MobilesdkBillingAddress, MobilesdkBillingAddressCompanion, MobilesdkBillingAddressController, MobilesdkBillingAddressState, MobilesdkCardError, MobilesdkCardErrorCardNumber, MobilesdkCardErrorCardholder, MobilesdkCardErrorCvv, MobilesdkCardErrorExpiryDate, MobilesdkCardInputController, MobilesdkCardInputSlimController, MobilesdkCardInputSlimStyleState, MobilesdkCardInputStyleState, MobilesdkComponentFontWeight, MobilesdkContinuousAuthorityAgreement, MobilesdkContinuousAuthorityAgreementCompanion, MobilesdkCustomerDetails, MobilesdkCustomerDetailsCompanion, MobilesdkCustomerDetailsResponse, MobilesdkCustomerDetailsResponseCompanion, MobilesdkEnvironment, MobilesdkEnvironmentCompanion, MobilesdkFinancialDetails, MobilesdkFinancialDetailsCompanion, MobilesdkKotlinArray<T>, MobilesdkKotlinEnum<E>, MobilesdkKotlinEnumCompanion, MobilesdkKotlinException, MobilesdkKotlinIllegalStateException, MobilesdkKotlinNothing, MobilesdkKotlinRuntimeException, MobilesdkKotlinThrowable, MobilesdkKotlinx_serialization_coreSerialKind, MobilesdkKotlinx_serialization_coreSerializersModule, MobilesdkLabelLocation, MobilesdkPaymentConfig, MobilesdkPaymentConfigCompanion, MobilesdkPaymentProcessorCompanion, MobilesdkPaymentProcessorInternal, MobilesdkPaymentResultCallbackCompanion, MobilesdkSaveCardBoxController, MobilesdkSaveCardState, MobilesdkSavedCardsController, MobilesdkSavedCardsState, MobilesdkStatus, MobilesdkStatusCanceled, MobilesdkStatusCompanion, MobilesdkStatusError, MobilesdkStatusErrorCompanion, MobilesdkStatusInitiated, MobilesdkStatusSessionExpired, MobilesdkStatusSuccess, MobilesdkStatusUnknown, MobilesdkTransactionDetails, MobilesdkTransactionDetailsCompanion, MobilesdkTransactionType, MobilesdkTransactionTypeCompanion, MobilesdkUi_textFontWeight, MobilesdkUi_textFontWeightCompanion, UIViewController;
 
-@protocol MobilesdkParcelizeParcelable, MobilesdkPaymentResultCallback, MobilesdkCardCallback, MobilesdkKotlinx_serialization_coreKSerializer, MobilesdkKotlinComparable, MobilesdkKotlinIterator, MobilesdkKotlinx_serialization_coreEncoder, MobilesdkKotlinx_serialization_coreSerialDescriptor, MobilesdkKotlinx_serialization_coreSerializationStrategy, MobilesdkKotlinx_serialization_coreDecoder, MobilesdkKotlinx_serialization_coreDeserializationStrategy, MobilesdkKotlinx_serialization_coreCompositeEncoder, MobilesdkKotlinAnnotation, MobilesdkKotlinx_serialization_coreCompositeDecoder, MobilesdkKotlinx_serialization_coreSerializersModuleCollector, MobilesdkKotlinKClass, MobilesdkKotlinKDeclarationContainer, MobilesdkKotlinKAnnotatedElement, MobilesdkKotlinKClassifier;
+@protocol MobilesdkCardCallback, MobilesdkKotlinAnnotation, MobilesdkKotlinComparable, MobilesdkKotlinIterator, MobilesdkKotlinKAnnotatedElement, MobilesdkKotlinKClass, MobilesdkKotlinKClassifier, MobilesdkKotlinKDeclarationContainer, MobilesdkKotlinx_serialization_coreCompositeDecoder, MobilesdkKotlinx_serialization_coreCompositeEncoder, MobilesdkKotlinx_serialization_coreDecoder, MobilesdkKotlinx_serialization_coreDeserializationStrategy, MobilesdkKotlinx_serialization_coreEncoder, MobilesdkKotlinx_serialization_coreKSerializer, MobilesdkKotlinx_serialization_coreSerialDescriptor, MobilesdkKotlinx_serialization_coreSerializationStrategy, MobilesdkKotlinx_serialization_coreSerializersModuleCollector, MobilesdkParcelizeParcelable, MobilesdkPaymentResultCallback;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -170,26 +170,9 @@ __attribute__((swift_name("PaymentConfig")))
 @interface MobilesdkPaymentConfig : MobilesdkBase <MobilesdkParcelizeParcelable>
 - (instancetype)initWithInstallationId:(NSString *)installationId clientToken:(NSString *)clientToken environment:(MobilesdkEnvironment *)environment transactionType:(MobilesdkTransactionType *)transactionType countryCode:(NSString * _Nullable)countryCode currencyCode:(NSString *)currencyCode transaction:(MobilesdkTransactionDetails *)transaction customer:(MobilesdkCustomerDetails * _Nullable)customer financialServices:(MobilesdkFinancialDetails * _Nullable)financialServices __attribute__((swift_name("init(installationId:clientToken:environment:transactionType:countryCode:currencyCode:transaction:customer:financialServices:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MobilesdkPaymentConfigCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkPaymentConfig *)doCopyInstallationId:(NSString *)installationId clientToken:(NSString *)clientToken environment:(MobilesdkEnvironment *)environment transactionType:(MobilesdkTransactionType *)transactionType countryCode:(NSString * _Nullable)countryCode currencyCode:(NSString *)currencyCode transaction:(MobilesdkTransactionDetails *)transaction customer:(MobilesdkCustomerDetails * _Nullable)customer financialServices:(MobilesdkFinancialDetails * _Nullable)financialServices __attribute__((swift_name("doCopy(installationId:clientToken:environment:transactionType:countryCode:currencyCode:transaction:customer:financialServices:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *clientToken __attribute__((swift_name("clientToken")));
 @property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
@@ -209,6 +192,7 @@ __attribute__((swift_name("PaymentConfig.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MobilesdkPaymentConfigCompanion *shared __attribute__((swift_name("shared")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -312,29 +296,10 @@ __attribute__((swift_name("Status.Canceled")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)canceled __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MobilesdkStatusCanceled *shared __attribute__((swift_name("shared")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 - (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(MobilesdkKotlinArray<id<MobilesdkKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @end
 
@@ -345,11 +310,7 @@ __attribute__((swift_name("Status.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MobilesdkStatusCompanion *shared __attribute__((swift_name("shared")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 - (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(MobilesdkKotlinArray<id<MobilesdkKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
 @end
 
@@ -363,26 +324,9 @@ __attribute__((swift_name("Status.Error")))
 @interface MobilesdkStatusError : MobilesdkStatus
 - (instancetype)initWithMessage:(NSString *)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MobilesdkStatusErrorCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkStatusError *)doCopyMessage:(NSString *)message __attribute__((swift_name("doCopy(message:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *message __attribute__((swift_name("message")));
 @end
@@ -394,6 +338,7 @@ __attribute__((swift_name("Status.ErrorCompanion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MobilesdkStatusErrorCompanion *shared __attribute__((swift_name("shared")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end
 
 
@@ -408,29 +353,10 @@ __attribute__((swift_name("Status.Initiated")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)initiated __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MobilesdkStatusInitiated *shared __attribute__((swift_name("shared")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 - (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(MobilesdkKotlinArray<id<MobilesdkKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @end
 
@@ -446,29 +372,10 @@ __attribute__((swift_name("Status.SessionExpired")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)sessionExpired __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MobilesdkStatusSessionExpired *shared __attribute__((swift_name("shared")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 - (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(MobilesdkKotlinArray<id<MobilesdkKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @end
 
@@ -484,29 +391,10 @@ __attribute__((swift_name("Status.Success")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)success __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MobilesdkStatusSuccess *shared __attribute__((swift_name("shared")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 - (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(MobilesdkKotlinArray<id<MobilesdkKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @end
 
@@ -522,29 +410,10 @@ __attribute__((swift_name("Status.Unknown")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)unknown __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MobilesdkStatusUnknown *shared __attribute__((swift_name("shared")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 - (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(MobilesdkKotlinArray<id<MobilesdkKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @end
 
@@ -560,19 +429,8 @@ __attribute__((swift_name("BillingAddress")))
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithLine1:(NSString * _Nullable)line1 line2:(NSString * _Nullable)line2 line3:(NSString * _Nullable)line3 line4:(NSString * _Nullable)line4 city:(NSString * _Nullable)city region:(NSString * _Nullable)region postcode:(NSString * _Nullable)postcode countryCode:(NSString * _Nullable)countryCode email:(NSString * _Nullable)email __attribute__((swift_name("init(line1:line2:line3:line4:city:region:postcode:countryCode:email:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MobilesdkBillingAddressCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkBillingAddress *)doCopyLine1:(NSString * _Nullable)line1 line2:(NSString * _Nullable)line2 line3:(NSString * _Nullable)line3 line4:(NSString * _Nullable)line4 city:(NSString * _Nullable)city region:(NSString * _Nullable)region postcode:(NSString * _Nullable)postcode countryCode:(NSString * _Nullable)countryCode email:(NSString * _Nullable)email __attribute__((swift_name("doCopy(line1:line2:line3:line4:city:region:postcode:countryCode:email:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (MobilesdkBillingAddress *)setCityCity:(NSString * _Nullable)city __attribute__((swift_name("setCity(city:)")));
 - (MobilesdkBillingAddress *)setCountryCodeCountryCode:(NSString *)countryCode __attribute__((swift_name("setCountryCode(countryCode:)")));
@@ -583,12 +441,6 @@ __attribute__((swift_name("BillingAddress")))
 - (MobilesdkBillingAddress *)setLine4Line4:(NSString * _Nullable)line4 __attribute__((swift_name("setLine4(line4:)")));
 - (MobilesdkBillingAddress *)setPostcodePostcode:(NSString * _Nullable)postcode __attribute__((swift_name("setPostcode(postcode:)")));
 - (MobilesdkBillingAddress *)setRegionRegion:(NSString * _Nullable)region __attribute__((swift_name("setRegion(region:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property NSString * _Nullable city __attribute__((swift_name("city")));
 @property NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
@@ -608,6 +460,7 @@ __attribute__((swift_name("BillingAddress.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MobilesdkBillingAddressCompanion *shared __attribute__((swift_name("shared")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end
 
 __attribute__((swift_name("CardError")))
@@ -619,23 +472,9 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CardError.CardNumber")))
 @interface MobilesdkCardErrorCardNumber : MobilesdkCardError
 - (instancetype)initWithMessage:(NSString *)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkCardErrorCardNumber *)doCopyMessage:(NSString *)message __attribute__((swift_name("doCopy(message:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *message __attribute__((swift_name("message")));
 @end
@@ -644,23 +483,9 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CardError.Cardholder")))
 @interface MobilesdkCardErrorCardholder : MobilesdkCardError
 - (instancetype)initWithMessage:(NSString *)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkCardErrorCardholder *)doCopyMessage:(NSString *)message __attribute__((swift_name("doCopy(message:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *message __attribute__((swift_name("message")));
 @end
@@ -669,23 +494,9 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CardError.Cvv")))
 @interface MobilesdkCardErrorCvv : MobilesdkCardError
 - (instancetype)initWithMessage:(NSString *)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkCardErrorCvv *)doCopyMessage:(NSString *)message __attribute__((swift_name("doCopy(message:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *message __attribute__((swift_name("message")));
 @end
@@ -694,23 +505,9 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CardError.ExpiryDate")))
 @interface MobilesdkCardErrorExpiryDate : MobilesdkCardError
 - (instancetype)initWithMessage:(NSString *)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkCardErrorExpiryDate *)doCopyMessage:(NSString *)message __attribute__((swift_name("doCopy(message:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *message __attribute__((swift_name("message")));
 @end
@@ -725,26 +522,9 @@ __attribute__((swift_name("ContinuousAuthorityAgreement")))
 @interface MobilesdkContinuousAuthorityAgreement : MobilesdkBase <MobilesdkParcelizeParcelable>
 - (instancetype)initWithMinFrequency:(NSString * _Nullable)minFrequency expiry:(NSString * _Nullable)expiry numberOfInstalments:(NSString * _Nullable)numberOfInstalments __attribute__((swift_name("init(minFrequency:expiry:numberOfInstalments:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MobilesdkContinuousAuthorityAgreementCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkContinuousAuthorityAgreement *)doCopyMinFrequency:(NSString * _Nullable)minFrequency expiry:(NSString * _Nullable)expiry numberOfInstalments:(NSString * _Nullable)numberOfInstalments __attribute__((swift_name("doCopy(minFrequency:expiry:numberOfInstalments:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString * _Nullable expiry __attribute__((swift_name("expiry")));
 @property (readonly) NSString * _Nullable minFrequency __attribute__((swift_name("minFrequency")));
@@ -758,6 +538,7 @@ __attribute__((swift_name("ContinuousAuthorityAgreement.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MobilesdkContinuousAuthorityAgreementCompanion *shared __attribute__((swift_name("shared")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end
 
 
@@ -772,26 +553,9 @@ __attribute__((swift_name("CustomerDetails")))
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithEmail:(NSString * _Nullable)email dateOfBirth:(NSString * _Nullable)dateOfBirth telephone:(NSString * _Nullable)telephone customerRef:(NSString * _Nullable)customerRef __attribute__((swift_name("init(email:dateOfBirth:telephone:customerRef:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MobilesdkCustomerDetailsCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkCustomerDetails *)doCopyEmail:(NSString * _Nullable)email dateOfBirth:(NSString * _Nullable)dateOfBirth telephone:(NSString * _Nullable)telephone customerRef:(NSString * _Nullable)customerRef __attribute__((swift_name("doCopy(email:dateOfBirth:telephone:customerRef:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /**
@@ -816,6 +580,7 @@ __attribute__((swift_name("CustomerDetails.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MobilesdkCustomerDetailsCompanion *shared __attribute__((swift_name("shared")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end
 
 __attribute__((swift_name("KotlinComparable")))
@@ -876,26 +641,9 @@ __attribute__((swift_name("FinancialDetails")))
 @interface MobilesdkFinancialDetails : MobilesdkBase <MobilesdkParcelizeParcelable>
 - (instancetype)initWithDateOfBirth:(NSString * _Nullable)dateOfBirth surname:(NSString * _Nullable)surname accountNumber:(NSString * _Nullable)accountNumber postCode:(NSString * _Nullable)postCode __attribute__((swift_name("init(dateOfBirth:surname:accountNumber:postCode:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MobilesdkFinancialDetailsCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkFinancialDetails *)doCopyDateOfBirth:(NSString * _Nullable)dateOfBirth surname:(NSString * _Nullable)surname accountNumber:(NSString * _Nullable)accountNumber postCode:(NSString * _Nullable)postCode __attribute__((swift_name("doCopy(dateOfBirth:surname:accountNumber:postCode:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString * _Nullable accountNumber __attribute__((swift_name("accountNumber")));
 @property (readonly) NSString * _Nullable dateOfBirth __attribute__((swift_name("dateOfBirth")));
@@ -910,6 +658,7 @@ __attribute__((swift_name("FinancialDetails.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MobilesdkFinancialDetailsCompanion *shared __attribute__((swift_name("shared")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end
 
 
@@ -922,26 +671,9 @@ __attribute__((swift_name("TransactionDetails")))
 @interface MobilesdkTransactionDetails : MobilesdkBase <MobilesdkParcelizeParcelable>
 - (instancetype)initWithTransactionId:(NSString * _Nullable)transactionId currency:(NSString * _Nullable)currency amount:(MobilesdkDouble * _Nullable)amount description:(NSString * _Nullable)description merchantRef:(NSString * _Nullable)merchantRef recurring:(MobilesdkBoolean * _Nullable)recurring deferred:(MobilesdkBoolean * _Nullable)deferred continuousAuthorityAgreement:(MobilesdkContinuousAuthorityAgreement * _Nullable)continuousAuthorityAgreement __attribute__((swift_name("init(transactionId:currency:amount:description:merchantRef:recurring:deferred:continuousAuthorityAgreement:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MobilesdkTransactionDetailsCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkTransactionDetails *)doCopyTransactionId:(NSString * _Nullable)transactionId currency:(NSString * _Nullable)currency amount:(MobilesdkDouble * _Nullable)amount description:(NSString * _Nullable)description merchantRef:(NSString * _Nullable)merchantRef recurring:(MobilesdkBoolean * _Nullable)recurring deferred:(MobilesdkBoolean * _Nullable)deferred continuousAuthorityAgreement:(MobilesdkContinuousAuthorityAgreement * _Nullable)continuousAuthorityAgreement __attribute__((swift_name("doCopy(transactionId:currency:amount:description:merchantRef:recurring:deferred:continuousAuthorityAgreement:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) MobilesdkDouble * _Nullable amount __attribute__((swift_name("amount")));
 @property (readonly) MobilesdkContinuousAuthorityAgreement * _Nullable continuousAuthorityAgreement __attribute__((swift_name("continuousAuthorityAgreement")));
@@ -959,6 +691,7 @@ __attribute__((swift_name("TransactionDetails.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MobilesdkTransactionDetailsCompanion *shared __attribute__((swift_name("shared")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end
 
 
@@ -1000,26 +733,9 @@ __attribute__((swift_name("CustomerDetailsResponse")))
 @interface MobilesdkCustomerDetailsResponse : MobilesdkBase <MobilesdkParcelizeParcelable>
 - (instancetype)initWithId:(NSString *)id __attribute__((swift_name("init(id:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MobilesdkCustomerDetailsResponseCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkCustomerDetailsResponse *)doCopyId:(NSString *)id __attribute__((swift_name("doCopy(id:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @end
@@ -1031,6 +747,7 @@ __attribute__((swift_name("CustomerDetailsResponse.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MobilesdkCustomerDetailsResponseCompanion *shared __attribute__((swift_name("shared")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end
 
 
@@ -1082,24 +799,10 @@ __attribute__((swift_name("BillingAddressState")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithFontSize:(int32_t)fontSize fontWeight:(MobilesdkComponentFontWeight *)fontWeight borderSize:(int32_t)borderSize borderCornerRadius:(int32_t)borderCornerRadius borderColor:(MobilesdkInt * _Nullable)borderColor defaultCountryCode:(NSString *)defaultCountryCode useDropdown:(BOOL)useDropdown showAddressLine2:(BOOL)showAddressLine2 showAddressLine3:(BOOL)showAddressLine3 showAddressLine4:(BOOL)showAddressLine4 skipCheckboxUI:(BOOL)skipCheckboxUI defaultAddress:(MobilesdkBillingAddress * _Nullable)defaultAddress onAddressFilled:(void (^)(MobilesdkBillingAddress *))onAddressFilled __attribute__((swift_name("init(fontSize:fontWeight:borderSize:borderCornerRadius:borderColor:defaultCountryCode:useDropdown:showAddressLine2:showAddressLine3:showAddressLine4:skipCheckboxUI:defaultAddress:onAddressFilled:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkBillingAddressState *)doCopyFontSize:(int32_t)fontSize fontWeight:(MobilesdkComponentFontWeight *)fontWeight borderSize:(int32_t)borderSize borderCornerRadius:(int32_t)borderCornerRadius borderColor:(MobilesdkInt * _Nullable)borderColor defaultCountryCode:(NSString *)defaultCountryCode useDropdown:(BOOL)useDropdown showAddressLine2:(BOOL)showAddressLine2 showAddressLine3:(BOOL)showAddressLine3 showAddressLine4:(BOOL)showAddressLine4 skipCheckboxUI:(BOOL)skipCheckboxUI defaultAddress:(MobilesdkBillingAddress * _Nullable)defaultAddress onAddressFilled:(void (^)(MobilesdkBillingAddress *))onAddressFilled __attribute__((swift_name("doCopy(fontSize:fontWeight:borderSize:borderCornerRadius:borderColor:defaultCountryCode:useDropdown:showAddressLine2:showAddressLine3:showAddressLine4:skipCheckboxUI:defaultAddress:onAddressFilled:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (MobilesdkBillingAddressState *)setOnAddressFilledCallback:(void (^)(MobilesdkBillingAddress *))callback __attribute__((swift_name("setOnAddressFilled(callback:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) MobilesdkInt * _Nullable borderColor __attribute__((swift_name("borderColor")));
 @property (readonly) int32_t borderCornerRadius __attribute__((swift_name("borderCornerRadius")));
@@ -1149,23 +852,9 @@ __attribute__((swift_name("CardInputSlimStyleState")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithTextSize:(id)textSize textFontWeight:(MobilesdkComponentFontWeight *)textFontWeight showCardHolderName:(BOOL)showCardHolderName cardHolderName:(NSString *)cardHolderName __attribute__((swift_name("init(textSize:textFontWeight:showCardHolderName:cardHolderName:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkCardInputSlimStyleState *)doCopyTextSize:(id)textSize textFontWeight:(MobilesdkComponentFontWeight *)textFontWeight showCardHolderName:(BOOL)showCardHolderName cardHolderName:(NSString *)cardHolderName __attribute__((swift_name("doCopy(textSize:textFontWeight:showCardHolderName:cardHolderName:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *cardHolderName __attribute__((swift_name("cardHolderName")));
 @property (readonly) BOOL showCardHolderName __attribute__((swift_name("showCardHolderName")));
@@ -1184,23 +873,9 @@ __attribute__((swift_name("CardInputStyleState")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithBackgroundCornerSize:(int32_t)backgroundCornerSize labelLocation:(MobilesdkLabelLocation *)labelLocation labelTextSize:(int32_t)labelTextSize labelTextFontWeight:(MobilesdkComponentFontWeight *)labelTextFontWeight fieldTextSize:(int32_t)fieldTextSize fieldTextFontWeight:(MobilesdkComponentFontWeight *)fieldTextFontWeight showCardHolderName:(BOOL)showCardHolderName __attribute__((swift_name("init(backgroundCornerSize:labelLocation:labelTextSize:labelTextFontWeight:fieldTextSize:fieldTextFontWeight:showCardHolderName:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkCardInputStyleState *)doCopyBackgroundCornerSize:(int32_t)backgroundCornerSize labelLocation:(MobilesdkLabelLocation *)labelLocation labelTextSize:(int32_t)labelTextSize labelTextFontWeight:(MobilesdkComponentFontWeight *)labelTextFontWeight fieldTextSize:(int32_t)fieldTextSize fieldTextFontWeight:(MobilesdkComponentFontWeight *)fieldTextFontWeight showCardHolderName:(BOOL)showCardHolderName __attribute__((swift_name("doCopy(backgroundCornerSize:labelLocation:labelTextSize:labelTextFontWeight:fieldTextSize:fieldTextFontWeight:showCardHolderName:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) int32_t backgroundCornerSize __attribute__((swift_name("backgroundCornerSize")));
 @property (readonly) MobilesdkComponentFontWeight *fieldTextFontWeight __attribute__((swift_name("fieldTextFontWeight")));
@@ -1264,23 +939,9 @@ __attribute__((swift_name("SaveCardState")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithFontSize:(int32_t)fontSize fontWeight:(MobilesdkComponentFontWeight *)fontWeight defaultState:(BOOL)defaultState __attribute__((swift_name("init(fontSize:fontWeight:defaultState:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkSaveCardState *)doCopyFontSize:(int32_t)fontSize fontWeight:(MobilesdkComponentFontWeight *)fontWeight defaultState:(BOOL)defaultState __attribute__((swift_name("doCopy(fontSize:fontWeight:defaultState:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) BOOL defaultState __attribute__((swift_name("defaultState")));
 @property (readonly) int32_t fontSize __attribute__((swift_name("fontSize")));
@@ -1309,25 +970,11 @@ __attribute__((swift_name("SavedCardsState")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithOnCardSelected:(void (^)(MobilesdkBoolean *))onCardSelected tryToUseDefaultCard:(BOOL)tryToUseDefaultCard __attribute__((swift_name("init(onCardSelected:tryToUseDefaultCard:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
+- (MobilesdkSavedCardsState *)doCopyOnCardSelected:(void (^)(MobilesdkBoolean *))onCardSelected tryToUseDefaultCard:(BOOL)tryToUseDefaultCard __attribute__((swift_name("doCopy(onCardSelected:tryToUseDefaultCard:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (MobilesdkSavedCardsState *)setOnCardSelectedCallback:(void (^)(MobilesdkBoolean *))callback __attribute__((swift_name("setOnCardSelected(callback:)")));
 - (MobilesdkSavedCardsState *)setTryToUseDefaultCardTryToUseDefaultCard:(BOOL)tryToUseDefaultCard __attribute__((swift_name("setTryToUseDefaultCard(tryToUseDefaultCard:)")));
-
-/**
- * @note annotations
- *   kotlin.native.HiddenFromObjC
-*/
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) void (^onCardSelected)(MobilesdkBoolean *) __attribute__((swift_name("onCardSelected")));
 @property (readonly) BOOL tryToUseDefaultCard __attribute__((swift_name("tryToUseDefaultCard")));
@@ -1369,6 +1016,25 @@ __attribute__((swift_name("KotlinArray")))
 @interface MobilesdkKotlinArray (Extensions)
 - (void)forErrorOnCardNumberError:(void (^)(NSString *))onCardNumberError onExpiryDateError:(void (^)(NSString *))onExpiryDateError onCvvError:(void (^)(NSString *))onCvvError onCardholderError:(void (^)(NSString *))onCardholderError __attribute__((swift_name("forError(onCardNumberError:onExpiryDateError:onCvvError:onCardholderError:)")));
 - (NSString *)mapToStringSeparator:(NSString *)separator __attribute__((swift_name("mapToString(separator:)")));
+@end
+
+__attribute__((swift_name("Kotlinx_serialization_coreSerializationStrategy")))
+@protocol MobilesdkKotlinx_serialization_coreSerializationStrategy
+@required
+- (void)serializeEncoder:(id<MobilesdkKotlinx_serialization_coreEncoder>)encoder value:(id _Nullable)value __attribute__((swift_name("serialize(encoder:value:)")));
+@property (readonly) id<MobilesdkKotlinx_serialization_coreSerialDescriptor> descriptor __attribute__((swift_name("descriptor")));
+@end
+
+__attribute__((swift_name("Kotlinx_serialization_coreDeserializationStrategy")))
+@protocol MobilesdkKotlinx_serialization_coreDeserializationStrategy
+@required
+- (id _Nullable)deserializeDecoder:(id<MobilesdkKotlinx_serialization_coreDecoder>)decoder __attribute__((swift_name("deserialize(decoder:)")));
+@property (readonly) id<MobilesdkKotlinx_serialization_coreSerialDescriptor> descriptor __attribute__((swift_name("descriptor")));
+@end
+
+__attribute__((swift_name("Kotlinx_serialization_coreKSerializer")))
+@protocol MobilesdkKotlinx_serialization_coreKSerializer <MobilesdkKotlinx_serialization_coreSerializationStrategy, MobilesdkKotlinx_serialization_coreDeserializationStrategy>
+@required
 @end
 
 __attribute__((swift_name("KotlinThrowable")))
@@ -1416,25 +1082,6 @@ __attribute__((swift_name("KotlinIllegalArgumentException")))
 - (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithCause:(MobilesdkKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithMessage:(NSString * _Nullable)message cause:(MobilesdkKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
-@end
-
-__attribute__((swift_name("Kotlinx_serialization_coreSerializationStrategy")))
-@protocol MobilesdkKotlinx_serialization_coreSerializationStrategy
-@required
-- (void)serializeEncoder:(id<MobilesdkKotlinx_serialization_coreEncoder>)encoder value:(id _Nullable)value __attribute__((swift_name("serialize(encoder:value:)")));
-@property (readonly) id<MobilesdkKotlinx_serialization_coreSerialDescriptor> descriptor __attribute__((swift_name("descriptor")));
-@end
-
-__attribute__((swift_name("Kotlinx_serialization_coreDeserializationStrategy")))
-@protocol MobilesdkKotlinx_serialization_coreDeserializationStrategy
-@required
-- (id _Nullable)deserializeDecoder:(id<MobilesdkKotlinx_serialization_coreDecoder>)decoder __attribute__((swift_name("deserialize(decoder:)")));
-@property (readonly) id<MobilesdkKotlinx_serialization_coreSerialDescriptor> descriptor __attribute__((swift_name("descriptor")));
-@end
-
-__attribute__((swift_name("Kotlinx_serialization_coreKSerializer")))
-@protocol MobilesdkKotlinx_serialization_coreKSerializer <MobilesdkKotlinx_serialization_coreSerializationStrategy, MobilesdkKotlinx_serialization_coreDeserializationStrategy>
-@required
 @end
 
 __attribute__((objc_subclassing_restricted))
