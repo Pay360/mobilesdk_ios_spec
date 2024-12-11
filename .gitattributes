@@ -1,1 +1,1 @@
-mobilesdk filter=lfs diff=lfs merge=lfs -text
+mobilesdk filter=lfs diff=lfs merge=lfs -binary
