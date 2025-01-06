@@ -220,6 +220,12 @@ __attribute__((swift_name("PaymentProcessorInternal")))
  * Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)processCardPaymentBillingAddress:(MobilesdkBillingAddress *)billingAddress error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("processCardPayment(billingAddress:)")));
+
+/**
+ * @note This method converts instances of IllegalArgumentException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (BOOL)processVerifyCardBillingAddress:(MobilesdkBillingAddress *)billingAddress error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("processVerifyCard(billingAddress:)")));
 - (void)setCardCallbackCallback:(id<MobilesdkCardCallback>)callback __attribute__((swift_name("setCardCallback(callback:)")));
 - (void)setCardCallbackOnCardSubmittedSuccessfully:(void (^)(void))onCardSubmittedSuccessfully onCardSubmittedWithErrors:(void (^)(MobilesdkKotlinArray<MobilesdkCardError *> *))onCardSubmittedWithErrors __attribute__((swift_name("setCardCallback(onCardSubmittedSuccessfully:onCardSubmittedWithErrors:)")));
 - (void)setPaymentResultCallbackCallback:(id<MobilesdkPaymentResultCallback>)callback __attribute__((swift_name("setPaymentResultCallback(callback:)")));
@@ -322,13 +328,14 @@ __attribute__((swift_name("Status.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Status.Error")))
 @interface MobilesdkStatusError : MobilesdkStatus
-- (instancetype)initWithMessage:(NSString *)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithMessage:(NSString *)message traceId:(NSString * _Nullable)traceId __attribute__((swift_name("init(message:traceId:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MobilesdkStatusErrorCompanion *companion __attribute__((swift_name("companion")));
-- (MobilesdkStatusError *)doCopyMessage:(NSString *)message __attribute__((swift_name("doCopy(message:)")));
+- (MobilesdkStatusError *)doCopyMessage:(NSString *)message traceId:(NSString * _Nullable)traceId __attribute__((swift_name("doCopy(message:traceId:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *message __attribute__((swift_name("message")));
+@property (readonly) NSString * _Nullable traceId __attribute__((swift_name("traceId")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -969,15 +976,17 @@ __attribute__((swift_name("SavedCardsState")))
 @interface MobilesdkSavedCardsState : MobilesdkBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (instancetype)initWithOnCardSelected:(void (^)(MobilesdkBoolean *))onCardSelected tryToUseDefaultCard:(BOOL)tryToUseDefaultCard __attribute__((swift_name("init(onCardSelected:tryToUseDefaultCard:)"))) __attribute__((objc_designated_initializer));
-- (MobilesdkSavedCardsState *)doCopyOnCardSelected:(void (^)(MobilesdkBoolean *))onCardSelected tryToUseDefaultCard:(BOOL)tryToUseDefaultCard __attribute__((swift_name("doCopy(onCardSelected:tryToUseDefaultCard:)")));
+- (instancetype)initWithOnCardSelected:(void (^)(MobilesdkBoolean *))onCardSelected withBorders:(BOOL)withBorders tryToUseDefaultCard:(BOOL)tryToUseDefaultCard __attribute__((swift_name("init(onCardSelected:withBorders:tryToUseDefaultCard:)"))) __attribute__((objc_designated_initializer));
+- (MobilesdkSavedCardsState *)doCopyOnCardSelected:(void (^)(MobilesdkBoolean *))onCardSelected withBorders:(BOOL)withBorders tryToUseDefaultCard:(BOOL)tryToUseDefaultCard __attribute__((swift_name("doCopy(onCardSelected:withBorders:tryToUseDefaultCard:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (MobilesdkSavedCardsState *)setOnCardSelectedCallback:(void (^)(MobilesdkBoolean *))callback __attribute__((swift_name("setOnCardSelected(callback:)")));
 - (MobilesdkSavedCardsState *)setTryToUseDefaultCardTryToUseDefaultCard:(BOOL)tryToUseDefaultCard __attribute__((swift_name("setTryToUseDefaultCard(tryToUseDefaultCard:)")));
+- (MobilesdkSavedCardsState *)setWithBordersWithBorders:(BOOL)withBorders __attribute__((swift_name("setWithBorders(withBorders:)")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) void (^onCardSelected)(MobilesdkBoolean *) __attribute__((swift_name("onCardSelected")));
 @property (readonly) BOOL tryToUseDefaultCard __attribute__((swift_name("tryToUseDefaultCard")));
+@property (readonly) BOOL withBorders __attribute__((swift_name("withBorders")));
 @end
 
 __attribute__((objc_subclassing_restricted))
