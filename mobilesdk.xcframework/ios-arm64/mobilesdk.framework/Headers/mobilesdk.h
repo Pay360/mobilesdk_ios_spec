@@ -229,8 +229,9 @@ __attribute__((swift_name("PaymentProcessorInternal")))
 - (void)setCardCallbackCallback:(id<MobilesdkCardCallback>)callback __attribute__((swift_name("setCardCallback(callback:)")));
 - (void)setCardCallbackOnCardSubmittedSuccessfully:(void (^)(void))onCardSubmittedSuccessfully onCardSubmittedWithErrors:(void (^)(MobilesdkKotlinArray<MobilesdkCardError *> *))onCardSubmittedWithErrors __attribute__((swift_name("setCardCallback(onCardSubmittedSuccessfully:onCardSubmittedWithErrors:)")));
 - (void)setPaymentResultCallbackCallback:(id<MobilesdkPaymentResultCallback>)callback __attribute__((swift_name("setPaymentResultCallback(callback:)")));
-- (void)setPaymentResultCallbackOnPaymentSuccess:(void (^)(void))onPaymentSuccess onPaymentFailed:(void (^)(NSString *))onPaymentFailed onPaymentMethodCanceled:(void (^)(void))onPaymentMethodCanceled __attribute__((swift_name("setPaymentResultCallback(onPaymentSuccess:onPaymentFailed:onPaymentMethodCanceled:)")));
+- (void)setPaymentResultCallbackOnPaymentSuccess:(void (^)(void))onPaymentSuccess onPaymentFailed:(void (^)(NSString *, NSString * _Nullable))onPaymentFailed onPaymentMethodCanceled:(void (^)(void))onPaymentMethodCanceled __attribute__((swift_name("setPaymentResultCallback(onPaymentSuccess:onPaymentFailed:onPaymentMethodCanceled:)")));
 - (void)setSaveCardIsSaveCard:(BOOL)isSaveCard __attribute__((swift_name("setSaveCard(isSaveCard:)")));
+@property (readonly) BOOL canSaveCards __attribute__((swift_name("canSaveCards")));
 @property (readonly) BOOL initiated __attribute__((swift_name("initiated")));
 @property (readonly) BOOL isCardEntered __attribute__((swift_name("isCardEntered")));
 @end
@@ -976,17 +977,15 @@ __attribute__((swift_name("SavedCardsState")))
 @interface MobilesdkSavedCardsState : MobilesdkBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (instancetype)initWithOnCardSelected:(void (^)(MobilesdkBoolean *))onCardSelected withBorders:(BOOL)withBorders tryToUseDefaultCard:(BOOL)tryToUseDefaultCard __attribute__((swift_name("init(onCardSelected:withBorders:tryToUseDefaultCard:)"))) __attribute__((objc_designated_initializer));
-- (MobilesdkSavedCardsState *)doCopyOnCardSelected:(void (^)(MobilesdkBoolean *))onCardSelected withBorders:(BOOL)withBorders tryToUseDefaultCard:(BOOL)tryToUseDefaultCard __attribute__((swift_name("doCopy(onCardSelected:withBorders:tryToUseDefaultCard:)")));
+- (instancetype)initWithOnCardSelected:(void (^)(MobilesdkBoolean *))onCardSelected tryToUseDefaultCard:(BOOL)tryToUseDefaultCard __attribute__((swift_name("init(onCardSelected:tryToUseDefaultCard:)"))) __attribute__((objc_designated_initializer));
+- (MobilesdkSavedCardsState *)doCopyOnCardSelected:(void (^)(MobilesdkBoolean *))onCardSelected tryToUseDefaultCard:(BOOL)tryToUseDefaultCard __attribute__((swift_name("doCopy(onCardSelected:tryToUseDefaultCard:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (MobilesdkSavedCardsState *)setOnCardSelectedCallback:(void (^)(MobilesdkBoolean *))callback __attribute__((swift_name("setOnCardSelected(callback:)")));
 - (MobilesdkSavedCardsState *)setTryToUseDefaultCardTryToUseDefaultCard:(BOOL)tryToUseDefaultCard __attribute__((swift_name("setTryToUseDefaultCard(tryToUseDefaultCard:)")));
-- (MobilesdkSavedCardsState *)setWithBordersWithBorders:(BOOL)withBorders __attribute__((swift_name("setWithBorders(withBorders:)")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) void (^onCardSelected)(MobilesdkBoolean *) __attribute__((swift_name("onCardSelected")));
 @property (readonly) BOOL tryToUseDefaultCard __attribute__((swift_name("tryToUseDefaultCard")));
-@property (readonly) BOOL withBorders __attribute__((swift_name("withBorders")));
 @end
 
 __attribute__((objc_subclassing_restricted))
