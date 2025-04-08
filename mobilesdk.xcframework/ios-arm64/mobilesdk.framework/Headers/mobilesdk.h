@@ -440,7 +440,7 @@ __attribute__((swift_name("BillingAddress")))
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (MobilesdkBillingAddress *)setCityCity:(NSString * _Nullable)city __attribute__((swift_name("setCity(city:)")));
 - (MobilesdkBillingAddress *)setCountryCodeCountryCode:(NSString *)countryCode __attribute__((swift_name("setCountryCode(countryCode:)")));
-- (MobilesdkBillingAddress *)setEmailEmail:(NSString *)email __attribute__((swift_name("setEmail(email:)")));
+- (MobilesdkBillingAddress *)setEmailEmail:(NSString *)email __attribute__((swift_name("setEmail(email:)"))) __attribute__((deprecated("Email is no longer supported in the billing address")));
 - (MobilesdkBillingAddress *)setLine1Line1:(NSString * _Nullable)line1 __attribute__((swift_name("setLine1(line1:)")));
 - (MobilesdkBillingAddress *)setLine2Line2:(NSString * _Nullable)line2 __attribute__((swift_name("setLine2(line2:)")));
 - (MobilesdkBillingAddress *)setLine3Line3:(NSString * _Nullable)line3 __attribute__((swift_name("setLine3(line3:)")));
