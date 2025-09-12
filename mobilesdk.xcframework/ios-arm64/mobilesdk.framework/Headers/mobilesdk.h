@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class MobilesdkAcceptPaymentMethods, MobilesdkAcceptPaymentMethodsCompanion, MobilesdkAuthenticationHelper, MobilesdkBillingAddress, MobilesdkBillingAddressCompanion, MobilesdkBillingAddressController, MobilesdkBillingAddressState, MobilesdkCardError, MobilesdkCardErrorCardNumber, MobilesdkCardErrorCardholder, MobilesdkCardErrorCvv, MobilesdkCardErrorExpiryDate, MobilesdkCardInputController, MobilesdkCardInputSlimController, MobilesdkCardInputSlimStyleState, MobilesdkCardInputStyleState, MobilesdkComponentFontWeight, MobilesdkContinuousAuthorityAgreement, MobilesdkContinuousAuthorityAgreementCompanion, MobilesdkCustomerDetails, MobilesdkCustomerDetailsCompanion, MobilesdkCustomerDetailsResponse, MobilesdkCustomerDetailsResponseCompanion, MobilesdkEnvironment, MobilesdkEnvironmentCompanion, MobilesdkFinancialDetails, MobilesdkFinancialDetailsCompanion, MobilesdkKotlinArray<T>, MobilesdkKotlinEnum<E>, MobilesdkKotlinEnumCompanion, MobilesdkKotlinException, MobilesdkKotlinIllegalStateException, MobilesdkKotlinNothing, MobilesdkKotlinRuntimeException, MobilesdkKotlinThrowable, MobilesdkKotlinx_serialization_coreSerialKind, MobilesdkKotlinx_serialization_coreSerializersModule, MobilesdkLabelLocation, MobilesdkPaymentConfig, MobilesdkPaymentConfigCompanion, MobilesdkPaymentProcessorCompanion, MobilesdkPaymentResultCallbackCompanion, MobilesdkResponses, MobilesdkResponsesCardManager, MobilesdkResponsesInitiatePayment, MobilesdkResponsesPayments, MobilesdkSaveCardBoxController, MobilesdkSaveCardState, MobilesdkSavedCardsController, MobilesdkSavedCardsState, MobilesdkStatus, MobilesdkStatusCanceled, MobilesdkStatusCompanion, MobilesdkStatusError, MobilesdkStatusErrorCompanion, MobilesdkStatusInitiated, MobilesdkStatusSessionExpired, MobilesdkStatusSuccess, MobilesdkStatusUnknown, MobilesdkTransactionDetails, MobilesdkTransactionDetailsCompanion, MobilesdkTransactionType, MobilesdkTransactionTypeCompanion, MobilesdkUi_textFontWeight, MobilesdkUi_textFontWeightCompanion, UIViewController;
+@class MobilesdkAcceptPaymentMethods, MobilesdkAcceptPaymentMethodsCompanion, MobilesdkAuthenticationHelper, MobilesdkBillingAddress, MobilesdkBillingAddressCompanion, MobilesdkBillingAddressController, MobilesdkBillingAddressState, MobilesdkCardError, MobilesdkCardErrorCardNumber, MobilesdkCardErrorCardholder, MobilesdkCardErrorCvv, MobilesdkCardErrorExpiryDate, MobilesdkCardInputController, MobilesdkCardInputSlimController, MobilesdkCardInputSlimStyleState, MobilesdkCardInputStyleState, MobilesdkComponentFontWeight, MobilesdkContinuousAuthorityAgreement, MobilesdkContinuousAuthorityAgreementCompanion, MobilesdkCustomerDetails, MobilesdkCustomerDetailsCompanion, MobilesdkCustomerDetailsResponse, MobilesdkCustomerDetailsResponseCompanion, MobilesdkEnvironment, MobilesdkEnvironmentCompanion, MobilesdkFinancialDetails, MobilesdkFinancialDetailsCompanion, MobilesdkKotlinArray<T>, MobilesdkKotlinEnum<E>, MobilesdkKotlinEnumCompanion, MobilesdkKotlinException, MobilesdkKotlinIllegalStateException, MobilesdkKotlinNothing, MobilesdkKotlinRuntimeException, MobilesdkKotlinThrowable, MobilesdkKotlinx_serialization_coreSerialKind, MobilesdkKotlinx_serialization_coreSerializersModule, MobilesdkLabelLocation, MobilesdkPaymentConfig, MobilesdkPaymentConfigCompanion, MobilesdkPaymentIntent, MobilesdkPaymentIntentCompanion, MobilesdkPaymentProcessor, MobilesdkPaymentProcessorCompanion, MobilesdkPaymentResult, MobilesdkPaymentResultCallbackCompanion, MobilesdkPaymentResultCanceled, MobilesdkPaymentResultCompanion, MobilesdkPaymentResultFailed, MobilesdkPaymentResultFailedCompanion, MobilesdkPaymentResultSuccess, MobilesdkResponses, MobilesdkResponsesCardManager, MobilesdkResponsesInitiatePayment, MobilesdkResponsesPayments, MobilesdkSaveCardBoxController, MobilesdkSaveCardState, MobilesdkSavedCardsController, MobilesdkSavedCardsState, MobilesdkStatus, MobilesdkStatusCanceled, MobilesdkStatusCompanion, MobilesdkStatusError, MobilesdkStatusErrorCompanion, MobilesdkStatusInitiated, MobilesdkStatusSessionExpired, MobilesdkStatusSuccess, MobilesdkStatusUnknown, MobilesdkTransactionDetails, MobilesdkTransactionDetailsCompanion, MobilesdkTransactionType, MobilesdkTransactionTypeCompanion, MobilesdkUi_textFontWeight, MobilesdkUi_textFontWeightCompanion, UIViewController;
 
-@protocol MobilesdkCardCallback, MobilesdkKotlinAnnotation, MobilesdkKotlinComparable, MobilesdkKotlinIterator, MobilesdkKotlinKAnnotatedElement, MobilesdkKotlinKClass, MobilesdkKotlinKClassifier, MobilesdkKotlinKDeclarationContainer, MobilesdkKotlinx_serialization_coreCompositeDecoder, MobilesdkKotlinx_serialization_coreCompositeEncoder, MobilesdkKotlinx_serialization_coreDecoder, MobilesdkKotlinx_serialization_coreDeserializationStrategy, MobilesdkKotlinx_serialization_coreEncoder, MobilesdkKotlinx_serialization_coreKSerializer, MobilesdkKotlinx_serialization_coreSerialDescriptor, MobilesdkKotlinx_serialization_coreSerializationStrategy, MobilesdkKotlinx_serialization_coreSerializersModuleCollector, MobilesdkParcelizeParcelable, MobilesdkPaymentResultCallback;
+@protocol MobilesdkCardCallback, MobilesdkKotlinAnnotation, MobilesdkKotlinComparable, MobilesdkKotlinIterator, MobilesdkKotlinKAnnotatedElement, MobilesdkKotlinKClass, MobilesdkKotlinKClassifier, MobilesdkKotlinKDeclarationContainer, MobilesdkKotlinx_serialization_coreCompositeDecoder, MobilesdkKotlinx_serialization_coreCompositeEncoder, MobilesdkKotlinx_serialization_coreDecoder, MobilesdkKotlinx_serialization_coreDeserializationStrategy, MobilesdkKotlinx_serialization_coreEncoder, MobilesdkKotlinx_serialization_coreKSerializer, MobilesdkKotlinx_serialization_coreSerialDescriptor, MobilesdkKotlinx_serialization_coreSerializationStrategy, MobilesdkKotlinx_serialization_coreSerializersModuleCollector, MobilesdkPaymentResultCallback;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -155,19 +155,15 @@ __attribute__((swift_name("CardManagementPage")))
 @property (readonly) UIViewController *uiController __attribute__((swift_name("uiController")));
 @end
 
-__attribute__((swift_name("ParcelizeParcelable")))
-@protocol MobilesdkParcelizeParcelable
-@required
-@end
-
 
 /**
  * @note annotations
  *   kotlinx.serialization.Serializable
+ *   androidx.compose.runtime.Stable
 */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("PaymentConfig")))
-@interface MobilesdkPaymentConfig : MobilesdkBase <MobilesdkParcelizeParcelable>
+@interface MobilesdkPaymentConfig : MobilesdkBase
 - (instancetype)initWithInstallationId:(NSString *)installationId clientToken:(NSString *)clientToken environment:(MobilesdkEnvironment *)environment transactionType:(MobilesdkTransactionType *)transactionType countryCode:(NSString * _Nullable)countryCode currencyCode:(NSString *)currencyCode transaction:(MobilesdkTransactionDetails *)transaction customer:(MobilesdkCustomerDetails * _Nullable)customer financialServices:(MobilesdkFinancialDetails * _Nullable)financialServices __attribute__((swift_name("init(installationId:clientToken:environment:transactionType:countryCode:currencyCode:transaction:customer:financialServices:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MobilesdkPaymentConfigCompanion *companion __attribute__((swift_name("companion")));
 - (MobilesdkPaymentConfig *)doCopyInstallationId:(NSString *)installationId clientToken:(NSString *)clientToken environment:(MobilesdkEnvironment *)environment transactionType:(MobilesdkTransactionType *)transactionType countryCode:(NSString * _Nullable)countryCode currencyCode:(NSString *)currencyCode transaction:(MobilesdkTransactionDetails *)transaction customer:(MobilesdkCustomerDetails * _Nullable)customer financialServices:(MobilesdkFinancialDetails * _Nullable)financialServices __attribute__((swift_name("doCopy(installationId:clientToken:environment:transactionType:countryCode:currencyCode:transaction:customer:financialServices:)")));
@@ -218,7 +214,6 @@ __attribute__((swift_name("PaymentProcessor")))
 - (BOOL)hasPaymentMethodMethod:(MobilesdkAcceptPaymentMethods *)method __attribute__((swift_name("hasPaymentMethod(method:)")));
 - (void)initiateOnInit:(void (^)(MobilesdkStatus *))onInit __attribute__((swift_name("initiate(onInit:)")));
 - (BOOL)isApplePayAvailable __attribute__((swift_name("isApplePayAvailable()")));
-- (BOOL)isConnected __attribute__((swift_name("isConnected()")));
 
 /**
  * @note This method converts instances of IllegalArgumentException to errors.
@@ -255,6 +250,8 @@ __attribute__((swift_name("PaymentProcessor.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MobilesdkPaymentProcessorCompanion *shared __attribute__((swift_name("shared")));
+- (MobilesdkPaymentProcessor *)doNewInstanceContext:(id _Nullable)context paymentConfig:(MobilesdkPaymentConfig *)paymentConfig __attribute__((swift_name("doNewInstance(context:paymentConfig:)")));
+- (MobilesdkPaymentProcessor *)doNewInstanceContext:(id _Nullable)context paymentConfig:(MobilesdkPaymentConfig *)paymentConfig onPaymentSuccess:(void (^)(MobilesdkPaymentProcessor *))onPaymentSuccess onPaymentFailed:(void (^)(MobilesdkPaymentProcessor *, NSString *, NSString * _Nullable))onPaymentFailed onPaymentMethodCanceled:(void (^)(MobilesdkPaymentProcessor *))onPaymentMethodCanceled onCardSubmittedSuccessfully:(void (^)(MobilesdkPaymentProcessor *))onCardSubmittedSuccessfully onCardSubmittedWithErrors:(void (^)(MobilesdkPaymentProcessor *, MobilesdkKotlinArray<MobilesdkCardError *> *))onCardSubmittedWithErrors onInitiate:(void (^)(MobilesdkPaymentProcessor *, MobilesdkStatus *))onInitiate __attribute__((swift_name("doNewInstance(context:paymentConfig:onPaymentSuccess:onPaymentFailed:onPaymentMethodCanceled:onCardSubmittedSuccessfully:onCardSubmittedWithErrors:onInitiate:)")));
 @end
 
 __attribute__((swift_name("CardCallback")))
@@ -430,7 +427,7 @@ __attribute__((swift_name("Status.Unknown")))
 */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("BillingAddress")))
-@interface MobilesdkBillingAddress : MobilesdkBase <MobilesdkParcelizeParcelable>
+@interface MobilesdkBillingAddress : MobilesdkBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithName:(NSString * _Nullable)name line1:(NSString * _Nullable)line1 line2:(NSString * _Nullable)line2 city:(NSString * _Nullable)city region:(NSString * _Nullable)region postcode:(NSString * _Nullable)postcode countryCode:(NSString *)countryCode __attribute__((swift_name("init(name:line1:line2:city:region:postcode:countryCode:)"))) __attribute__((objc_designated_initializer));
@@ -526,7 +523,7 @@ __attribute__((swift_name("CardError.ExpiryDate")))
 */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ContinuousAuthorityAgreement")))
-@interface MobilesdkContinuousAuthorityAgreement : MobilesdkBase <MobilesdkParcelizeParcelable>
+@interface MobilesdkContinuousAuthorityAgreement : MobilesdkBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithMinFrequency:(NSString * _Nullable)minFrequency expiry:(NSString * _Nullable)expiry numberOfInstalments:(NSString * _Nullable)numberOfInstalments __attribute__((swift_name("init(minFrequency:expiry:numberOfInstalments:)"))) __attribute__((objc_designated_initializer));
@@ -557,7 +554,7 @@ __attribute__((swift_name("ContinuousAuthorityAgreement.Companion")))
 */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CustomerDetails")))
-@interface MobilesdkCustomerDetails : MobilesdkBase <MobilesdkParcelizeParcelable>
+@interface MobilesdkCustomerDetails : MobilesdkBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithEmail:(NSString * _Nullable)email dateOfBirth:(NSString * _Nullable)dateOfBirth telephone:(NSString * _Nullable)telephone customerRef:(NSString * _Nullable)customerRef registered:(MobilesdkBoolean * _Nullable)registered __attribute__((swift_name("init(email:dateOfBirth:telephone:customerRef:registered:)"))) __attribute__((objc_designated_initializer));
@@ -618,7 +615,7 @@ __attribute__((swift_name("KotlinEnum")))
 */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Environment")))
-@interface MobilesdkEnvironment : MobilesdkKotlinEnum<MobilesdkEnvironment *> <MobilesdkParcelizeParcelable>
+@interface MobilesdkEnvironment : MobilesdkKotlinEnum<MobilesdkEnvironment *>
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
@@ -648,7 +645,7 @@ __attribute__((swift_name("Environment.Companion")))
 */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FinancialDetails")))
-@interface MobilesdkFinancialDetails : MobilesdkBase <MobilesdkParcelizeParcelable>
+@interface MobilesdkFinancialDetails : MobilesdkBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithDateOfBirth:(NSString * _Nullable)dateOfBirth surname:(NSString * _Nullable)surname accountNumber:(NSString * _Nullable)accountNumber postCode:(NSString * _Nullable)postCode __attribute__((swift_name("init(dateOfBirth:surname:accountNumber:postCode:)"))) __attribute__((objc_designated_initializer));
@@ -680,7 +677,7 @@ __attribute__((swift_name("FinancialDetails.Companion")))
 */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TransactionDetails")))
-@interface MobilesdkTransactionDetails : MobilesdkBase <MobilesdkParcelizeParcelable>
+@interface MobilesdkTransactionDetails : MobilesdkBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithCurrency:(NSString * _Nullable)currency amount:(MobilesdkDouble * _Nullable)amount merchantRef:(NSString * _Nullable)merchantRef __attribute__((swift_name("init(currency:amount:merchantRef:)"))) __attribute__((objc_designated_initializer));
@@ -717,7 +714,7 @@ __attribute__((swift_name("TransactionDetails.Companion")))
 */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TransactionType")))
-@interface MobilesdkTransactionType : MobilesdkKotlinEnum<MobilesdkTransactionType *> <MobilesdkParcelizeParcelable>
+@interface MobilesdkTransactionType : MobilesdkKotlinEnum<MobilesdkTransactionType *>
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
@@ -746,7 +743,7 @@ __attribute__((swift_name("TransactionType.Companion")))
 */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CustomerDetailsResponse")))
-@interface MobilesdkCustomerDetailsResponse : MobilesdkBase <MobilesdkParcelizeParcelable>
+@interface MobilesdkCustomerDetailsResponse : MobilesdkBase
 - (instancetype)initWithId:(NSString *)id __attribute__((swift_name("init(id:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MobilesdkCustomerDetailsResponseCompanion *companion __attribute__((swift_name("companion")));
 - (MobilesdkCustomerDetailsResponse *)doCopyId:(NSString *)id __attribute__((swift_name("doCopy(id:)")));
@@ -796,6 +793,120 @@ __attribute__((swift_name("AcceptPaymentMethods.Companion")))
 @property (class, readonly, getter=shared) MobilesdkAcceptPaymentMethodsCompanion *shared __attribute__((swift_name("shared")));
 - (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 - (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(MobilesdkKotlinArray<id<MobilesdkKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PaymentIntent")))
+@interface MobilesdkPaymentIntent : MobilesdkBase
+- (instancetype)initWithConfig:(MobilesdkPaymentConfig *)config billingAddress:(MobilesdkBillingAddress * _Nullable)billingAddress __attribute__((swift_name("init(config:billingAddress:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) MobilesdkPaymentIntentCompanion *companion __attribute__((swift_name("companion")));
+- (MobilesdkPaymentIntent *)doCopyConfig:(MobilesdkPaymentConfig *)config billingAddress:(MobilesdkBillingAddress * _Nullable)billingAddress __attribute__((swift_name("doCopy(config:billingAddress:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) MobilesdkBillingAddress * _Nullable billingAddress __attribute__((swift_name("billingAddress")));
+@property (readonly) MobilesdkPaymentConfig *config __attribute__((swift_name("config")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PaymentIntent.Companion")))
+@interface MobilesdkPaymentIntentCompanion : MobilesdkBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) MobilesdkPaymentIntentCompanion *shared __attribute__((swift_name("shared")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((swift_name("PaymentResult")))
+@interface MobilesdkPaymentResult : MobilesdkBase
+@property (class, readonly, getter=companion) MobilesdkPaymentResultCompanion *companion __attribute__((swift_name("companion")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PaymentResult.Canceled")))
+@interface MobilesdkPaymentResultCanceled : MobilesdkPaymentResult
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)canceled __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) MobilesdkPaymentResultCanceled *shared __attribute__((swift_name("shared")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(MobilesdkKotlinArray<id<MobilesdkKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PaymentResult.Companion")))
+@interface MobilesdkPaymentResultCompanion : MobilesdkBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) MobilesdkPaymentResultCompanion *shared __attribute__((swift_name("shared")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(MobilesdkKotlinArray<id<MobilesdkKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PaymentResult.Failed")))
+@interface MobilesdkPaymentResultFailed : MobilesdkPaymentResult
+- (instancetype)initWithReason:(NSString * _Nullable)reason __attribute__((swift_name("init(reason:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) MobilesdkPaymentResultFailedCompanion *companion __attribute__((swift_name("companion")));
+- (MobilesdkPaymentResultFailed *)doCopyReason:(NSString * _Nullable)reason __attribute__((swift_name("doCopy(reason:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable reason __attribute__((swift_name("reason")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PaymentResult.FailedCompanion")))
+@interface MobilesdkPaymentResultFailedCompanion : MobilesdkBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) MobilesdkPaymentResultFailedCompanion *shared __attribute__((swift_name("shared")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PaymentResult.Success")))
+@interface MobilesdkPaymentResultSuccess : MobilesdkPaymentResult
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)success __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) MobilesdkPaymentResultSuccess *shared __attribute__((swift_name("shared")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+- (id<MobilesdkKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(MobilesdkKotlinArray<id<MobilesdkKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
+- (NSString *)description __attribute__((swift_name("description()")));
 @end
 
 __attribute__((objc_subclassing_restricted))
