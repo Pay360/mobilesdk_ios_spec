@@ -150,7 +150,8 @@ __attribute__((swift_name("CardManagementPage")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (void)display __attribute__((swift_name("display()")));
-- (void)setCredentialsUsername:(NSString *)username password:(NSString *)password installationId:(NSString *)installationId environment:(MobilesdkEnvironment *)environment __attribute__((swift_name("setCredentials(username:password:installationId:environment:)")));
+- (void)setCredentialsAuthToken:(NSString *)authToken installationId:(NSString *)installationId environment:(MobilesdkEnvironment *)environment __attribute__((swift_name("setCredentials(authToken:installationId:environment:)")));
+- (void)setCredentialsUsername:(NSString *)username password:(NSString *)password installationId:(NSString *)installationId environment:(MobilesdkEnvironment *)environment __attribute__((swift_name("setCredentials(username:password:installationId:environment:)"))) __attribute__((deprecated("Use bearer token based setCredentials instead")));
 - (void)setCustomerReferenceCustomerReference:(NSString *)customerReference __attribute__((swift_name("setCustomerReference(customerReference:)")));
 @property (readonly) UIViewController *uiController __attribute__((swift_name("uiController")));
 @end
@@ -1141,13 +1142,13 @@ __attribute__((swift_name("AuthenticationHelper")))
  * @note This method converts instances of AuthenticationHelper.AuthorizationException, CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (NSString * _Nullable)getAuthTokenEnvironment:(MobilesdkEnvironment *)environment instId:(NSString *)instId userName:(NSString *)userName password:(NSString *)password customerReference:(NSString * _Nullable)customerReference guestPayment:(BOOL)guestPayment error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("getAuthToken(environment:instId:userName:password:customerReference:guestPayment:)")));
+- (NSString * _Nullable)getAuthTokenEnvironment:(MobilesdkEnvironment *)environment instId:(NSString *)instId userName:(NSString *)userName password:(NSString *)password customerReference:(NSString * _Nullable)customerReference guestPayment:(BOOL)guestPayment includeManageScope:(BOOL)includeManageScope error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("getAuthToken(environment:instId:userName:password:customerReference:guestPayment:includeManageScope:)")));
 
 /**
  * @note This method converts instances of AuthenticationHelper.AuthorizationException, CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)requestAuthTokenEnvironment:(MobilesdkEnvironment *)environment instId:(NSString *)instId userName:(NSString *)userName password:(NSString *)password customerReference:(NSString * _Nullable)customerReference guestPayment:(BOOL)guestPayment completionHandler:(void (^)(NSString * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("requestAuthToken(environment:instId:userName:password:customerReference:guestPayment:completionHandler:)")));
+- (void)requestAuthTokenEnvironment:(MobilesdkEnvironment *)environment instId:(NSString *)instId userName:(NSString *)userName password:(NSString *)password customerReference:(NSString * _Nullable)customerReference guestPayment:(BOOL)guestPayment includeManageScope:(BOOL)includeManageScope completionHandler:(void (^)(NSString * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("requestAuthToken(environment:instId:userName:password:customerReference:guestPayment:includeManageScope:completionHandler:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -1171,6 +1172,11 @@ __attribute__((swift_name("Responses.CardManager")))
 @property (readonly) NSString *ERROR_DELETE_CARD __attribute__((swift_name("ERROR_DELETE_CARD")));
 @property (readonly) NSString *ERROR_INVALID_CREDENTIALS __attribute__((swift_name("ERROR_INVALID_CREDENTIALS")));
 @property (readonly) NSString *ERROR_MAKE_PRIMARY_CARD __attribute__((swift_name("ERROR_MAKE_PRIMARY_CARD")));
+@property (readonly) NSString *ERROR_MOBILE_DELETE_CARD __attribute__((swift_name("ERROR_MOBILE_DELETE_CARD")));
+@property (readonly) NSString *ERROR_MOBILE_MAKE_PRIMARY __attribute__((swift_name("ERROR_MOBILE_MAKE_PRIMARY")));
+@property (readonly) NSString *ERROR_MOBILE_STORED_CARDS __attribute__((swift_name("ERROR_MOBILE_STORED_CARDS")));
+@property (readonly) NSString *INFO_USING_MOBILE_API __attribute__((swift_name("INFO_USING_MOBILE_API")));
+@property (readonly) NSString *WARN_FALLBACK_TO_LEGACY __attribute__((swift_name("WARN_FALLBACK_TO_LEGACY")));
 @property (readonly) NSString *WARN_USERNAME_PASSWORD __attribute__((swift_name("WARN_USERNAME_PASSWORD")));
 @end
 
@@ -1194,6 +1200,7 @@ __attribute__((swift_name("Responses.Payments")))
 @property (class, readonly, getter=shared) MobilesdkResponsesPayments *shared __attribute__((swift_name("shared")));
 - (NSString *)unknownErrorStatus:(id)status traceId:(id _Nullable)traceId __attribute__((swift_name("unknownError(status:traceId:)")));
 - (NSString *)unknownErrorStatus:(id)status error:(id _Nullable)error traceId:(id _Nullable)traceId __attribute__((swift_name("unknownError(status:error:traceId:)")));
+@property (readonly) NSString *CONNECTION_FAILED __attribute__((swift_name("CONNECTION_FAILED")));
 @property (readonly) NSString *CONNECTION_TIMEOUT __attribute__((swift_name("CONNECTION_TIMEOUT")));
 @end
 
