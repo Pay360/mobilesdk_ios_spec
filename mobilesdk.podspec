@@ -1,11 +1,11 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'mobilesdk'
-    spec.version                  = '1.3.0-SNAPSHOT'
+    spec.version                  = '1.3.0'
     spec.homepage                 = 'https://www.accesspaysuite.com/'
     spec.source                   = { :git=> 'https://github.com/Pay360/mobilesdk_ios_spec.git', :tag=> spec.version }
     spec.authors                  = 'Access PaySuite'
     spec.license                  = { :type => 'Copyright', :text => <<-LICENSE
-    Copyright 2025
+    Copyright 2026
     Access PaySuite
     LICENSE
     }
